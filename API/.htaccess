@@ -1,0 +1,19 @@
+# This file contains API/.htaccess for project ESP-0002
+#
+# File Information
+# Project Name: ESP-0002
+# Model Name: API
+# File Name: .htaccess
+# File Version: 1.1.0
+# Author: Troy L Marker
+# Language: Apache Server Configuration
+#
+# File Last Modified: 08/31/2023
+# File Authored on: 03/15/2023
+# File Copyright: 03/2023
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . index.php [L]
