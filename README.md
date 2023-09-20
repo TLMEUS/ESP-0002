@@ -1,4 +1,4 @@
-# ESP-0002
+# ESP-0002-A
  Application Programming Interface for my ESP program series.
 
 UPDATE A: Added the functionality to get a list of plans in a category
