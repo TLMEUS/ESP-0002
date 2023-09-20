@@ -53,8 +53,8 @@ class Plan {
      * @param string|null $colPid
      * @return void
      */
-    public function processRequest(string $method, ?string $colId, ?string $colPid): void {
-        if ($colPid === null) {
+    public function processRequest(string $method, ?string $colPid, ?string $colId): void {
+        if ($colId == null) {
             switch ($method) {
                 case "GET":
                     echo json_encode(value: $this->gateway->getAllForCategory(colPid: $colPid));
@@ -66,7 +66,7 @@ class Plan {
                         $this->planUnprocessableEntity(errors: $errors);
                         return;
                     }
-                    $id = $this->gateway->create(parent: $colId, data: $data);
+                    $id = $this->gateway->create(parent: $colPid, data: $data);
                     $this->planCreated(colId: $id);
                     break;
                 default:

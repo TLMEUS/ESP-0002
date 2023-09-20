@@ -3,14 +3,14 @@
  * This file contains API/index.php for project ESP-0002
  *
  * File Information
- * Project Designation: ESP-0002
+ * Project Designation: ESP-0002-A
  * Model Name: API
  * File Name: index.php
  * File Version: 1.1.0
  * Author: Troy L Marker
  * Language: PHP 8.2
  *
- * File Last Modified: 08/31/2023
+ * File Last Modified: 09/19/2023
  * File Authored on: 03/15/2023
  * File Copyright: 03/2023
  */
@@ -84,7 +84,7 @@ switch ($resource) {
     case "plan":
         $controller_gateway = new PlanGateway($database);
         $controller = new PlanController($controller_gateway);
-        $controller->processRequest(method: $method, colId: $colId, colPid: $colPid);
+        $controller->processRequest(method: $method, colPid: $colPid, colId: $colId);
         break;
     case "addon":
         $controller_gateway = new AddonGateway($database);
